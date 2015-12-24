@@ -1,0 +1,9 @@
+class DatabaseConfig(object):
+    CHARSET = 'utf8'
+    UNICODE = True
+    WARNINGS = True
+    HOST = 'localhost'
+    USER = 'db_username'
+    PORT = 3306
+    PASSWORD = 'db_pwd'
+    DATABASE = 'db_name'

@@ -1,0 +1,133 @@
+[2015-12-24 10:43:46,722][1547][INFO][mysql_wrapper.py:_do_use:48]: atrs_test
+[2015-12-24 10:43:46,722][1547][DEBUG][mysql_wrapper.py:_init_db:44]: Mysql init success.
+[2015-12-24 10:43:46,722][1547][DEBUG][mysql_wrapper.py:execute:70]: execute cmd: update t_account  name = "update_value" where  username = "wm";
+[2015-12-24 10:43:46,723][1547][ERROR][mysql_wrapper.py:execute:76]: Execute line: [update t_account  name = "update_value" where  username = "wm";] failed.
+[2015-12-24 10:43:46,723][1547][ERROR][mysql_wrapper.py:execute:79]: Traceback (most recent call last):
+  File "mysql_wrapper.py", line 71, in execute
+    self.cursor.execute(line)
+  File "/Library/Python/2.7/site-packages/mysql/connector/cursor.py", line 515, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+  File "/Library/Python/2.7/site-packages/mysql/connector/connection.py", line 488, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+  File "/Library/Python/2.7/site-packages/mysql/connector/connection.py", line 395, in _handle_result
+    raise errors.get_exception(packet)
+ProgrammingError: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= "update_value" where  username = "wm"' at line 1
+
+[2015-12-24 10:43:46,724][1547][DEBUG][mysql_wrapper.py:execute:70]: execute cmd: update t_account  name = "update_value_by_id" where  id = "1";
+[2015-12-24 10:43:46,724][1547][ERROR][mysql_wrapper.py:execute:76]: Execute line: [update t_account  name = "update_value_by_id" where  id = "1";] failed.
+[2015-12-24 10:43:46,724][1547][ERROR][mysql_wrapper.py:execute:79]: Traceback (most recent call last):
+  File "mysql_wrapper.py", line 71, in execute
+    self.cursor.execute(line)
+  File "/Library/Python/2.7/site-packages/mysql/connector/cursor.py", line 515, in execute
+    self._handle_result(self._connection.cmd_query(stmt))
+  File "/Library/Python/2.7/site-packages/mysql/connector/connection.py", line 488, in cmd_query
+    result = self._handle_result(self._send_cmd(ServerCmd.QUERY, query))
+  File "/Library/Python/2.7/site-packages/mysql/connector/connection.py", line 395, in _handle_result
+    raise errors.get_exception(packet)
+ProgrammingError: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= "update_value_by_id" where  id = "1"' at line 1
+
+[2015-12-24 10:43:46,724][1547][DEBUG][mysql_wrapper.py:close:66]: Close Database: [atrs_test] success.
+[2015-12-24 10:44:35,423][1564][INFO][mysql_wrapper.py:_do_use:48]: atrs_test
+[2015-12-24 10:44:35,424][1564][DEBUG][mysql_wrapper.py:_init_db:44]: Mysql init success.
+[2015-12-24 10:44:35,424][1564][DEBUG][mysql_wrapper.py:execute:70]: execute cmd: update t_account set  name = "update_value" where  username = "wm";
+[2015-12-24 10:44:35,458][1564][DEBUG][mysql_wrapper.py:execute:70]: execute cmd: update t_account set  name = "update_value_by_id" where  id = "1";
+[2015-12-24 10:44:35,462][1564][DEBUG][mysql_wrapper.py:close:66]: Close Database: [atrs_test] success.
+[2015-12-24 10:45:55,765][1585][INFO][mysql_wrapper.py:_do_use:48]: atrs_test
+[2015-12-24 10:45:55,766][1585][DEBUG][mysql_wrapper.py:_init_db:44]: Mysql init success.
+[2015-12-24 10:45:55,766][1585][DEBUG][mysql_wrapper.py:execute:70]: execute cmd: update t_account set  is_super = "1", name = "update_value_by_dict" where  username = "wm"and password = "changed";
+[2015-12-24 10:45:55,786][1585][DEBUG][mysql_wrapper.py:close:66]: Close Database: [atrs_test] success.
+[2015-12-24 10:46:32,096][1592][INFO][mysql_wrapper.py:_do_use:48]: atrs_test
+[2015-12-24 10:46:32,096][1592][DEBUG][mysql_wrapper.py:_init_db:44]: Mysql init success.
+[2015-12-24 10:46:32,096][1592][DEBUG][mysql_wrapper.py:execute:70]: execute cmd: update t_account set  is_super = "1", name = "update_value_by_dict" where  username = "wm" and  password = "changed";
+[2015-12-24 10:46:32,103][1592][DEBUG][mysql_wrapper.py:close:66]: Close Database: [atrs_test] success.
+[2015-12-24 10:47:23,787][1604][INFO][mysql_wrapper.py:_do_use:48]: atrs_test
+[2015-12-24 10:47:23,788][1604][DEBUG][mysql_wrapper.py:_init_db:44]: Mysql init success.
+[2015-12-24 10:47:23,788][1604][DEBUG][mysql_wrapper.py:execute:70]: execute cmd: update t_account set  is_super = "1", name = "update_value_by_dict" where  username = "wm" and  password = "changed";
+[2015-12-24 10:47:23,797][1604][DEBUG][mysql_wrapper.py:close:66]: Close Database: [atrs_test] success.
+[2015-12-24 15:56:26,340][2243][INFO][mysql_wrapper.py:_do_use:48]: atrs_test
+[2015-12-24 15:56:26,340][2243][DEBUG][mysql_wrapper.py:_init_db:44]: Mysql init success.
+[2015-12-24 15:56:26,341][2243][DEBUG][mysql_wrapper.py:close:66]: Close Database: [atrs_test] success.
+[2015-12-24 15:56:34,867][2251][INFO][mysql_wrapper.py:_do_use:48]: atrs_test
+[2015-12-24 15:56:34,868][2251][DEBUG][mysql_wrapper.py:_init_db:44]: Mysql init success.
+[2015-12-24 15:56:34,868][2251][DEBUG][mysql_wrapper.py:close:66]: Close Database: [atrs_test] success.
+[2015-12-24 15:56:53,672][2258][INFO][mysql_wrapper.py:_do_use:48]: atrs_test
+[2015-12-24 15:56:53,673][2258][DEBUG][mysql_wrapper.py:_init_db:44]: Mysql init success.
+[2015-12-24 15:56:53,673][2258][DEBUG][mysql_wrapper.py:close:66]: Close Database: [atrs_test] success.
+[2015-12-24 15:57:00,286][2265][INFO][mysql_wrapper.py:_do_use:48]: atrs_test
+[2015-12-24 15:57:00,286][2265][DEBUG][mysql_wrapper.py:_init_db:44]: Mysql init success.
+[2015-12-24 15:57:00,287][2265][DEBUG][mysql_wrapper.py:close:66]: Close Database: [atrs_test] success.
+[2015-12-24 16:54:39,490][2392][INFO][mysql_wrapper.py:_do_use:48]: atrs_test
+[2015-12-24 16:54:39,490][2392][DEBUG][mysql_wrapper.py:_init_db:44]: Mysql init success.
+[2015-12-24 16:54:39,490][2392][DEBUG][mysql_wrapper.py:execute:71]: execute cmd: insert into t_account(username,password) values ("1","z");
+[2015-12-24 16:54:39,532][2392][DEBUG][mysql_wrapper.py:execute:71]: execute cmd: insert into t_account(username,password) values ("2","bx");
+[2015-12-24 16:54:39,532][2392][DEBUG][mysql_wrapper.py:execute:71]: execute cmd: insert into t_account(username,password) values ("3","c");
+[2015-12-24 16:54:39,534][2392][DEBUG][mysql_wrapper.py:execute:71]: execute cmd: insert into t_account(username,password) values ("4","d");
+[2015-12-24 16:54:39,536][2392][DEBUG][mysql_wrapper.py:execute:71]: execute cmd: insert into t_account(username,password) values ("5","xxs");
+[2015-12-24 16:54:39,538][2392][DEBUG][mysql_wrapper.py:execute:71]: execute cmd: insert into t_account(username,password) values ("6","x");
+[2015-12-24 16:54:39,539][2392][DEBUG][mysql_wrapper.py:execute:71]: execute cmd: insert into t_account(username,password) values ("7","g");
+[2015-12-24 16:54:39,540][2392][DEBUG][mysql_wrapper.py:execute:71]: execute cmd: insert into t_account(username,password) values ("8","n");
+[2015-12-24 16:54:39,540][2392][DEBUG][mysql_wrapper.py:execute:71]: execute cmd: insert into t_account(username,password) values ("9","y");
+[2015-12-24 16:54:39,541][2392][DEBUG][mysql_wrapper.py:execute:71]: execute cmd: insert into t_account(username,password) values ("10","o");
+[2015-12-24 16:54:39,546][2392][DEBUG][mysql_wrapper.py:close:66]: Close Database: [atrs_test] success.
+[2015-12-24 17:01:51,762][2449][INFO][mysql_wrapper.py:_do_use:48]: atrs_test
+[2015-12-24 17:01:51,763][2449][DEBUG][mysql_wrapper.py:_init_db:44]: Mysql init success.
+[2015-12-24 17:01:51,769][2449][DEBUG][mysql_wrapper.py:close:66]: Close Database: [atrs_test] success.
+[2015-12-24 17:02:32,521][2459][INFO][mysql_wrapper.py:_do_use:48]: atrs_test
+[2015-12-24 17:02:32,521][2459][DEBUG][mysql_wrapper.py:_init_db:44]: Mysql init success.
+[2015-12-24 17:02:32,521][2459][DEBUG][mysql_wrapper.py:execute:71]: execute cmd: select username,password from t_account  where  username = "1"   order by  username desc,  password asc ;
+[2015-12-24 17:02:32,592][2459][DEBUG][mysql_wrapper.py:close:66]: Close Database: [atrs_test] success.
+[2015-12-24 17:02:46,758][2466][INFO][mysql_wrapper.py:_do_use:48]: atrs_test
+[2015-12-24 17:02:46,759][2466][DEBUG][mysql_wrapper.py:_init_db:44]: Mysql init success.
+[2015-12-24 17:02:46,759][2466][DEBUG][mysql_wrapper.py:execute:71]: execute cmd: select username,password from t_account  where  username = "1"   order by  username desc,  password asc ;
+[2015-12-24 17:02:46,763][2466][DEBUG][mysql_wrapper.py:close:66]: Close Database: [atrs_test] success.
+[2015-12-24 17:02:54,492][2473][INFO][mysql_wrapper.py:_do_use:48]: atrs_test
+[2015-12-24 17:02:54,493][2473][DEBUG][mysql_wrapper.py:_init_db:44]: Mysql init success.
+[2015-12-24 17:02:54,493][2473][DEBUG][mysql_wrapper.py:execute:71]: execute cmd: select username,password from t_account  where  username = "1"   order by  username desc,  password asc ;
+[2015-12-24 17:02:54,495][2473][DEBUG][mysql_wrapper.py:close:66]: Close Database: [atrs_test] success.
+[2015-12-24 17:03:49,710][2480][INFO][mysql_wrapper.py:_do_use:48]: atrs_test
+[2015-12-24 17:03:49,711][2480][DEBUG][mysql_wrapper.py:_init_db:44]: Mysql init success.
+[2015-12-24 17:03:49,712][2480][DEBUG][mysql_wrapper.py:execute:71]: execute cmd: select username,password from t_account  where  username = "wm" and  password = "changed"   order by  username desc,  password asc ;
+[2015-12-24 17:03:49,731][2480][DEBUG][mysql_wrapper.py:close:66]: Close Database: [atrs_test] success.
+[2015-12-24 17:05:13,219][2491][INFO][mysql_wrapper.py:_do_use:48]: atrs_test
+[2015-12-24 17:05:13,219][2491][DEBUG][mysql_wrapper.py:_init_db:44]: Mysql init success.
+[2015-12-24 17:05:13,219][2491][DEBUG][mysql_wrapper.py:execute:71]: execute cmd: select username,password from t_account    order by  username desc,  password asc ;
+[2015-12-24 17:05:13,221][2491][DEBUG][mysql_wrapper.py:close:66]: Close Database: [atrs_test] success.
+[2015-12-24 17:06:50,846][2500][INFO][mysql_wrapper.py:_do_use:48]: atrs_test
+[2015-12-24 17:06:50,846][2500][DEBUG][mysql_wrapper.py:_init_db:44]: Mysql init success.
+[2015-12-24 17:06:50,847][2500][DEBUG][mysql_wrapper.py:execute:71]: execute cmd: select username,password from t_account  where  username = "wm" and  password = "changed"   order by  username desc,  password asc  limit 0,2;
+[2015-12-24 17:06:50,848][2500][DEBUG][mysql_wrapper.py:close:66]: Close Database: [atrs_test] success.
+[2015-12-24 17:07:09,495][2507][INFO][mysql_wrapper.py:_do_use:48]: atrs_test
+[2015-12-24 17:07:09,495][2507][DEBUG][mysql_wrapper.py:_init_db:44]: Mysql init success.
+[2015-12-24 17:07:09,495][2507][DEBUG][mysql_wrapper.py:execute:71]: execute cmd: select username,password from t_account  where  username = "wm" and  password = "changed"   order by  username desc,  password asc  limit 0,1;
+[2015-12-24 17:07:09,496][2507][DEBUG][mysql_wrapper.py:close:66]: Close Database: [atrs_test] success.
+[2015-12-24 17:08:27,529][2523][INFO][mysql_wrapper.py:_do_use:48]: atrs_test
+[2015-12-24 17:08:27,529][2523][DEBUG][mysql_wrapper.py:_init_db:44]: Mysql init success.
+[2015-12-24 17:08:27,530][2523][DEBUG][mysql_wrapper.py:execute:71]: execute cmd: select * from t_account    order by  username desc,  password asc  limit 0,1;
+[2015-12-24 17:08:27,532][2523][DEBUG][mysql_wrapper.py:execute:71]: execute cmd: show fields from t_account ;
+[2015-12-24 17:08:27,559][2523][DEBUG][mysql_wrapper.py:close:66]: Close Database: [atrs_test] success.
+[2015-12-24 17:08:34,524][2530][INFO][mysql_wrapper.py:_do_use:48]: atrs_test
+[2015-12-24 17:08:34,524][2530][DEBUG][mysql_wrapper.py:_init_db:44]: Mysql init success.
+[2015-12-24 17:08:34,525][2530][DEBUG][mysql_wrapper.py:execute:71]: execute cmd: select * from t_account    order by  username desc,  password asc  limit 0,0;
+[2015-12-24 17:08:34,533][2530][DEBUG][mysql_wrapper.py:close:66]: Close Database: [atrs_test] success.
+[2015-12-24 17:08:55,858][2537][INFO][mysql_wrapper.py:_do_use:48]: atrs_test
+[2015-12-24 17:08:55,858][2537][DEBUG][mysql_wrapper.py:_init_db:44]: Mysql init success.
+[2015-12-24 17:08:55,859][2537][DEBUG][mysql_wrapper.py:execute:71]: execute cmd: select * from t_account    order by  username desc,  password asc  limit 0,1;
+[2015-12-24 17:08:55,860][2537][DEBUG][mysql_wrapper.py:execute:71]: execute cmd: show fields from t_account ;
+[2015-12-24 17:08:55,879][2537][DEBUG][mysql_wrapper.py:close:66]: Close Database: [atrs_test] success.
+[2015-12-24 17:09:03,664][2544][INFO][mysql_wrapper.py:_do_use:48]: atrs_test
+[2015-12-24 17:09:03,664][2544][DEBUG][mysql_wrapper.py:_init_db:44]: Mysql init success.
+[2015-12-24 17:09:03,664][2544][DEBUG][mysql_wrapper.py:execute:71]: execute cmd: select * from t_account    order by  username desc,  password asc  limit 0,5;
+[2015-12-24 17:09:03,673][2544][DEBUG][mysql_wrapper.py:execute:71]: execute cmd: show fields from t_account ;
+[2015-12-24 17:09:03,691][2544][DEBUG][mysql_wrapper.py:close:66]: Close Database: [atrs_test] success.
+[2015-12-24 17:09:19,568][2552][INFO][mysql_wrapper.py:_do_use:48]: atrs_test
+[2015-12-24 17:09:19,568][2552][DEBUG][mysql_wrapper.py:_init_db:44]: Mysql init success.
+[2015-12-24 17:09:19,568][2552][DEBUG][mysql_wrapper.py:execute:71]: execute cmd: select id from t_account    order by  username desc,  password asc  limit 0,5;
+[2015-12-24 17:09:19,570][2552][DEBUG][mysql_wrapper.py:close:66]: Close Database: [atrs_test] success.
+[2015-12-24 17:09:32,842][2559][INFO][mysql_wrapper.py:_do_use:48]: atrs_test
+[2015-12-24 17:09:32,842][2559][DEBUG][mysql_wrapper.py:_init_db:44]: Mysql init success.
+[2015-12-24 17:09:32,843][2559][DEBUG][mysql_wrapper.py:execute:71]: execute cmd: select id from t_account    order by  password asc,  id desc  limit 0,5;
+[2015-12-24 17:09:32,844][2559][DEBUG][mysql_wrapper.py:close:66]: Close Database: [atrs_test] success.
+[2015-12-24 17:11:22,677][2566][INFO][mysql_wrapper.py:_do_use:48]: atrs_test
+[2015-12-24 17:11:22,677][2566][DEBUG][mysql_wrapper.py:_init_db:44]: Mysql init success.
+[2015-12-24 17:11:22,678][2566][DEBUG][mysql_wrapper.py:execute:71]: execute cmd: select id from t_account    order by  username asc,  password asc,  id desc  limit 0,5;
+[2015-12-24 17:11:22,679][2566][DEBUG][mysql_wrapper.py:close:66]: Close Database: [atrs_test] success.
