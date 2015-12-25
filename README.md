@@ -23,7 +23,7 @@
 	insert_row(tableName, value_map);
 
 	#删除
-  clear_rows(tableName, key, value):
+	clear_rows(tableName, key, value):
 
 	clear_row_by_id(tableName, id);
 
