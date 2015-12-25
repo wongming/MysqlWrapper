@@ -10,7 +10,7 @@ from mysql.connector.conversion import *
 try:
     import database_config
 except ImportError:
-    print "No database_config.py found in path, pls refer to database_config.py.sample."
+    print "database_config.py error or no database_config.py found in path."
     sys.exit(1)
 import logging, logging.config
 import traceback
@@ -66,7 +66,7 @@ class MysqlWrapper:
             self.logger.debug('Close Database: [%s] success.' % self.conf.DATABASE)
 
     def execute(self, line):
-        print line
+        #print line
         try:
             self.logger.debug("execute cmd: " + line)
             self.cursor.execute(line)
@@ -82,7 +82,7 @@ class MysqlWrapper:
         return True
 
     def query(self, line):
-        print line
+        #print line
         'return None if query failed, return list is query success'
         try:
             if not self.execute(line):
@@ -172,7 +172,6 @@ class MysqlWrapper:
 
     def	clear_rows_by_ids(self, tableName, ids):
         line = 'DELETE FROM %(tableName)s where id in (%(ids)s) ;' % {'tableName': tableName, 'ids': ids}
-        print line
         if not self.execute(line):
             self.logger.error('Clear rows from table: [%s] by ids, ids: [%s] failed. Exit!' % (tableName, ids))
             self.close()
@@ -265,6 +264,16 @@ class MysqlWrapper:
             rows.append(row_map)
         return rows
 
+    def isunique_by_value(self, tableName, cond_key, cond_value):
+        return self.isunique_by_dict(tableName, {cond_key: cond_value})
+
+    def isunique_by_dict(self, tableName, cond_dict):
+        rows = self.get_rows_by_dict(tableName, 0, 1, cond_dict)
+        if len(rows) == 0:
+            return True
+        else:
+            return False
+
 def test():
     db = MysqlWrapper()
     '''
@@ -293,6 +302,10 @@ def test():
     db.update_value_by_dict('t_account', {'username': 'wm','password': 'changed'},{'name': 'update_value_by_dict', 'is_super': 1})
     '''
     #print db.get_rows_by_dict('t_account', 0, 1, {'username':'wm','password':'changed'}, 'username,password',{'username':'desc','password':'asc'})
-    print db.get_rows_by_dict('t_account', 0, 5, {}, 'id',{'id':'desc','username':'asc','password':'asc'})
+    #print db.get_rows_by_dict('t_account', 0, 5, {}, 'id',{'id':'desc','username':'asc','password':'asc'})
+    print db.isunique_by_dict('t_account',{'username':1})
+    print db.isunique_by_dict('t_account',{'username':111})
+    print db.isunique_by_value('t_account','username',1)
+    print db.isunique_by_value('t_account','username',111)
 if __name__ == '__main__':
     test()

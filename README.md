@@ -18,9 +18,7 @@
 	insert_row(tableName, value_map);
 
 	#删除
-	clear_row(tableName, id_name, id_value);
-
-	clear_rows(tableName, id_name, id_values);
+  clear_rows(tableName, key, value):
 
 	clear_row_by_id(tableName, id);
 
@@ -29,23 +27,22 @@
 	clear_rows_by_dict(tableName, cond_dict);
 
 	#修改
-	update_value(tableName, id_name, id_value, value_map);
+	update_value(tableName, cond_name, cond_value, value_map);
 
 	update_value_by_id(tableName, id, value_map);
 
 	update_value_by_dict(tableName, cond_dict, value_map);
 
 	#查询
-  get_row(tableName, id_name, id_value, select_fields = '*');
-
-	get_row_by_id(tableName, id, select_field = '*',order_col = 'id', asc = True);
-
-	get_rows_by_dict(start, limit, tableName, cond_dict, select_field = '*', order_col = 'id', asc = True);
-
-  get_rows_by_condition_string(start, limit, tableName, cond_string, select_field = '*', order_col = 'id', asc = True);
-
+	get_row(tableName, id_name, id_value, select_fields = '*');
+	
+	get_row_by_id(tableName, id, select_fields = '*');
+	
+	get_rows(tableName, start, limit, select_fields = '*', order_dict={});
+	
+	get_rows_by_dict(tableName, start, limit, cond_dict, select_fields = '*', order_dict={});
 
 	#unique校验
-	isunique_by_value(tableName,cond_key,cond_value);
+	isunique_by_value(tableName, cond_key, cond_value);
 
 	isunique_by_condition_dict(tableName,cond_dict);
