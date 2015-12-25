@@ -1,5 +1,10 @@
 # MysqlWrapper
-## 1. 数据库配置
+## 3. 环境
+* Python 2.7.5
+* MySQL 5.6.21
+* mysql_connector_python_cext-2.1.3-py2.7
+
+## 2. 数据库配置
 可在database_config.py中配置数据库地址账号密码以及数据库，配置示例如下：
 
     class DatabaseConfig(object):
@@ -12,7 +17,7 @@
         PASSWORD = 'db_pwd'
         DATABASE = 'db_name'
 
-## 2. MysqlWrapper接口
+## 3. MysqlWrapper接口
 
 	#添加
 	insert_row(tableName, value_map);
@@ -35,11 +40,11 @@
 
 	#查询
 	get_row(tableName, id_name, id_value, select_fields = '*');
-	
+
 	get_row_by_id(tableName, id, select_fields = '*');
-	
+
 	get_rows(tableName, start, limit, select_fields = '*', order_dict={});
-	
+
 	get_rows_by_dict(tableName, start, limit, cond_dict, select_fields = '*', order_dict={});
 
 	#unique校验
