@@ -10,14 +10,21 @@ reload(sys)
 sys.setdefaultencoding('utf8')
 cur_dir = os.path.split(os.path.realpath(__file__))[0]
 import mysql_wrapper
-sys.path.append(cur_dir+'/../control/')
-from BaseControl import RT
 
 def gen_field_str(fielddict):
     return fielddict['name'] + ' ' + fielddict['type']  + ' ' + fielddict['attr']
 
+class RT(object):
+    SUCC = 1
+    EMPTY = 2
+    DUP = 3
+    IERR = 4
+    SVN_ERR = 5
+    NO_FILE = 6
+    STOP = 7
+
 class BaseTable(object):
-    logging.config.fileConfig(cur_dir+'/../conf/log.conf')
+    logging.config.fileConfig(os.path.join(cur_dir, 'log.conf'))
     logger = logging.getLogger("db")
     def execute(self, line):
         return self.db_wrapper.execute(line)

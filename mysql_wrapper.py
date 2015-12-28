@@ -2,8 +2,8 @@
 import os, sys
 reload(sys)
 sys.setdefaultencoding('utf8')
-_currentdirpath = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, _currentdirpath)
+cur_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, cur_dir)
 #import string_util
 import mysql.connector
 from mysql.connector.conversion import *
@@ -19,7 +19,7 @@ class MysqlWrapper:
     mysql = None
     conf = None
     cursor = None
-    logging.config.fileConfig(os.path.join(_currentdirpath, 'log.conf'))
+    logging.config.fileConfig(os.path.join(cur_dir, 'log.conf'))
     default_logger = logging.getLogger('MysqlWrapper')
     def __init__(self, logger=default_logger, conf = database_config.DatabaseConfig()):
         self.conf = conf
