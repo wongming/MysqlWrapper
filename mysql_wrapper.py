@@ -263,6 +263,17 @@ class MysqlWrapper:
                 row_map[fields[i]] = row[i]
             rows.append(row_map)
         return rows
+        
+    def get_count(self, tableName, cond_dict=None):
+        cond_str = ''
+        if cond_dict:
+            cond_str += self._convert_cond_dict(cond_dict)
+        line = 'select count(*) from %(tableName)s %(condition)s' \
+                % {'tableName': tableName, 'condition': cond_str}
+        rows = self.query(line)
+        if rows is None:
+            return -1
+        return rows[0][0]
 
     def isunique_by_value(self, tableName, cond_key, cond_value):
         return self.isunique_by_dict(tableName, {cond_key: cond_value})
