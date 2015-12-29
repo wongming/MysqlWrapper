@@ -135,6 +135,13 @@ class MysqlWrapper:
                 order_str += ' %(colname)s %(direction)s ' % {'colname': key, 'direction': value}
         return order_str
 
+    def _convert_text(text):
+        try:
+            text = eval(text)
+        except:
+            pass
+        return text
+
     def insert_row(self, tableName, value_map):
         field_names_str = ''
         field_values_str = ''
@@ -263,8 +270,8 @@ class MysqlWrapper:
                 row_map[fields[i]] = row[i]
             rows.append(row_map)
         return rows
-        
-    def get_count(self, tableName, cond_dict=None):
+
+    def count(self, tableName, cond_dict=None):
         cond_str = ''
         if cond_dict:
             cond_str += self._convert_cond_dict(cond_dict)

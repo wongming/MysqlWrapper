@@ -1,0 +1,15 @@
+[2015-12-28 16:33:15,367][9648][INFO][mysql_wrapper.py:_do_use:48]: atrs_test
+[2015-12-28 16:33:15,368][9648][DEBUG][mysql_wrapper.py:_init_db:44]: Mysql init success.
+[2015-12-28 16:35:12,395][9648][DEBUG][mysql_wrapper.py:close:66]: Close Database: [atrs_test] success.
+[2015-12-28 16:35:24,853][9664][INFO][mysql_wrapper.py:_do_use:48]: atrs_test
+[2015-12-28 16:35:24,853][9664][DEBUG][mysql_wrapper.py:_init_db:44]: Mysql init success.
+[2015-12-28 16:35:36,264][9664][DEBUG][mysql_wrapper.py:close:66]: Close Database: [atrs_test] success.
+[2015-12-28 19:13:29,505][10337][INFO][mysql_wrapper.py:_do_use:48]: atrs_test
+[2015-12-28 19:13:29,506][10337][DEBUG][mysql_wrapper.py:_init_db:44]: Mysql init success.
+[2015-12-28 19:13:29,510][10337][DEBUG][mysql_wrapper.py:close:66]: Close Database: [atrs_test] success.
+[2015-12-28 19:13:47,830][10347][INFO][mysql_wrapper.py:_do_use:48]: atrs_test
+[2015-12-28 19:13:47,830][10347][DEBUG][mysql_wrapper.py:_init_db:44]: Mysql init success.
+[2015-12-28 19:13:47,835][10347][DEBUG][mysql_wrapper.py:close:66]: Close Database: [atrs_test] success.
+[2015-12-28 19:14:02,925][10357][INFO][mysql_wrapper.py:_do_use:48]: atrs_test
+[2015-12-28 19:14:02,925][10357][DEBUG][mysql_wrapper.py:_init_db:44]: Mysql init success.
+[2015-12-28 19:14:02,929][10357][DEBUG][mysql_wrapper.py:close:66]: Close Database: [atrs_test] success.
